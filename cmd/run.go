@@ -19,6 +19,7 @@ The web server serves HTML file specified by --file flag.`,
 	Run: runCmdRun,
 }
 
+// runCmdRun starts the HTTP server when the run command is called
 func runCmdRun(cmd *cobra.Command, args []string) {
 	http.HandleFunc("/", htmlFileHandler)
 
@@ -31,10 +32,13 @@ func runCmdRun(cmd *cobra.Command, args []string) {
 func init() {
 	rootCmd.AddCommand(runCmd)
 
+	//hide the help flag from Usage
 	runCmd.Flags().StringVar(&htmlFilePath, "file", "", "path to the HTML file (required)")
 	runCmd.MarkFlagRequired("file")
 }
 
+// htmlFileHandler parser the HTML file and executes it
+// id the file can't be opened, the function logs an error and exits before execution
 func htmlFileHandler(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles(htmlFilePath)
 	if err != nil {

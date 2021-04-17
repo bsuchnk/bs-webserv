@@ -7,9 +7,9 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "bs-webserv",
-	Short: "bs-webserv is a simple CLI program which starts an HTTP web server.",
-	Long: `bs-webserv is a simple CLI program which starts an HTTP web server.
-The server serves one HTML file.`,
+	Short: "bs-webserv is a simple CLI program which starts a HTTP web server.",
+	Long: `bs-webserv is a simple CLI program which starts a HTTP web server.
+The server serves selected HTML file.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -18,5 +18,7 @@ func Execute() {
 }
 
 func init() {
-
+	// Hide --help flag from Usage
+	rootCmd.PersistentFlags().BoolP("help", "h", false, "Print usage")
+	rootCmd.PersistentFlags().Lookup("help").Hidden = true
 }
