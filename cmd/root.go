@@ -7,9 +7,9 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "bs-webserv",
-	Short: "bs-webserv is a simple CLI program which starts a HTTP web server.",
-	Long: `bs-webserv is a simple CLI program which starts a HTTP web server.
-The server serves selected HTML file.`,
+	Short: "bs-webserv is a simple CLI program which starts an http web server.",
+	Long: `bs-webserv is a simple CLI program which starts an http web server.
+The server serves an HTML file selected by the user.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
