@@ -1,6 +1,6 @@
 package main
 
-import "bs-webserv/cmd"
+import "github.com/bsuchnk/bs-webserv/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,4 +1,4 @@
-module bs-webserv
+module github.com/bsuchnk/bs-webserv
 
 go 1.16
 
