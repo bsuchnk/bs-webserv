@@ -41,7 +41,7 @@ bs-webserv is a simple CLI program for starting an HTTP web server serving an HT
 
 ![nonexistent_example](https://user-images.githubusercontent.com/75221970/115293135-3f3b2700-a157-11eb-91ab-dc3457c2bd59.png)
 
-### Tests
+## Tests
     $ cd $GOPATH/pkg/mod/github.com/bsuchnk/bs-webserv@v1.0.2
     $ go test -v ./cmd
     === RUN   TestCorrectHtmlFileHandler
@@ -57,6 +57,6 @@ bs-webserv is a simple CLI program for starting an HTTP web server serving an HT
     PASS
     ok      github.com/bsuchnk/bs-webserv/cmd       0.100s
 
-### Tools used:
+## Tools used:
 - **Go**
 - **Cobra**
