@@ -1,6 +1,6 @@
 # bs-webserv
 
-bs-webserv is a simple CLI program for starting a HTTP web server serving an HTML file.
+bs-webserv is a simple CLI program for starting an HTTP web server serving an HTML file.
 
 ## Table of Contents
 - [Installing](#installing)
